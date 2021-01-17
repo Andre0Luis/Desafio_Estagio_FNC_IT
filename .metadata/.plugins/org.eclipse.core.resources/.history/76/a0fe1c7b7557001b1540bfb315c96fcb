@@ -1,0 +1,5 @@
+package io.github.labauto.todo.model;
+
+public class Todo {
+
+}

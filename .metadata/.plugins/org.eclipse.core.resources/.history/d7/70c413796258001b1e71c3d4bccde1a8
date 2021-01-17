@@ -1,0 +1,30 @@
+package io.github.labauto.todo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import io.github.labauto.todo.model.Exame;
+import io.github.labauto.todo.model.Paciente;
+import io.github.labauto.todo.model.Todo;
+import io.github.labauto.todo.repository.ExameRepository;
+import io.github.labauto.todo.repository.PacienteRepository;
+import io.github.labauto.todo.repository.TodoRepository;
+
+@SpringBootApplication
+
+public class TodoApplication {
+	
+	
+
+
+		
+	public static void main(String[] args) {
+		SpringApplication.run(TodoApplication.class, args);
+		
+	
+	}
+
+		}

@@ -1,0 +1,58 @@
+package io.github.labauto.todo;
+
+import java.time.LocalDateTime;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import io.github.labauto.todo.model.Paciente;
+import io.github.labauto.todo.model.Todo;
+import io.github.labauto.todo.repository.PacienteRepository;
+import io.github.labauto.todo.repository.TodoRepository;
+
+@SpringBootApplication
+
+public class TodoApplication {
+	
+	@Autowired
+	private PacienteRepository pacienteRepository;
+	
+	
+	@Bean
+	public CommandLineRunner init() {
+		return new CommandLineRunner() {
+			
+			@Override
+			public void run(String... args) throws Exception {
+				
+				Paciente paciente = new Paciente();
+				paciente.setNome("Testeeee");
+				paciente.setCPF("491.375.858-03");
+				paciente.setEmail("aluis2085@gmail.com");
+				
+				pacienteRepository.save(paciente);
+				
+				
+				
+			}
+		};
+		
+	}
+		
+
+		
+		
+
+
+
+		
+	public static void main(String[] args) {
+		SpringApplication.run(TodoApplication.class, args);
+		
+	
+	}
+
+}
